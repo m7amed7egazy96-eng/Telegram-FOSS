@@ -87,6 +87,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScrollerCustom;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -3850,7 +3851,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             };
             viewPage.listView.setVerticalScrollBarEnabled(true);
             viewPage.listView.setInstantClick(true);
-            viewPage.layoutManager = new LinearLayoutManager(context) {
+            viewPage.layoutManager = new GridLayoutManager(context, 3) {
 
                 @Override
                 protected int firstPosition() {
